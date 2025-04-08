@@ -11,6 +11,7 @@ const ProfileHeader = () => (
           <img src={logo} alt="E-food" />
         </a>
       </div>
+      <h3 id="type">0 produto(s) no carrinho</h3>
     </ProfileHdr>
   </>
 )
