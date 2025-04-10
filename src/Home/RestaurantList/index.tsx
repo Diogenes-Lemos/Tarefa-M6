@@ -1,6 +1,6 @@
 import { MainArea } from './style'
 import Restaurant from '../Restaurant'
-import Btn from '../../buttons'
+import { Btn } from '../../buttons'
 import Hioki from '../../assets/Hioki.png'
 import Dvita from '../../assets/dolce-vita.png'
 

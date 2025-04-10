@@ -1,6 +1,7 @@
 import ProfileHeader from './Header'
 import Hero from './Hero'
 import { ListArea } from './style'
+import Item from './Modal/Item'
 import Ftr from '../Footer'
 import Product from '../Product'
 import Pizza1 from '../assets/Pizza1.png'
@@ -55,6 +56,7 @@ const Profile1 = () => (
       </div>
     </ListArea>
     <Ftr />
+    <Item />
   </body>
 )
 

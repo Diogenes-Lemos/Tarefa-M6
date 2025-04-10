@@ -1,10 +1,12 @@
-import { Sbtn } from './styles'
+import { Sbtn, SproductBtn } from './styles'
 
 type Props = {
   title: string
   link: string
 }
 
-const Btn = ({ title, link }: Props) => <Sbtn to={link}>{title}</Sbtn>
+export const Btn = ({ title, link }: Props) => <Sbtn to={link}>{title}</Sbtn>
 
-export default Btn
+export const ProductBtn = ({ title, link }: Props) => (
+  <SproductBtn to={link}>{title}</SproductBtn>
+)

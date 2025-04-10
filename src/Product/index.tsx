@@ -1,4 +1,5 @@
-import { ProductArea, ProductBtn } from './style'
+import { ProductArea } from './style'
+import { ProductBtn } from '../buttons/index'
 
 type Props = {
   id: string
@@ -17,7 +18,7 @@ const Product = ({ id, imagePath, title, description }: Props) => (
       <p>{description}</p>
     </div>
     <div id="btnarea">
-      <ProductBtn>Adicionar ao carrinho</ProductBtn>
+      <ProductBtn link="#" title="Mais detalhes" />
     </div>
   </ProductArea>
 )
