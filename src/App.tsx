@@ -1,19 +1,6 @@
-import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { MainStyles } from './mainStyles'
-import Home from './Home/Index'
-import Profile1 from './Profile1/Profile'
-
-const routes = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/profile1',
-    element: <Profile1 />
-  }
-])
+import { RouterProvider } from 'react-router-dom'
+import { routes } from './paths'
 
 function App() {
   return (
