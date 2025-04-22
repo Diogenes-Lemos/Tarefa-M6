@@ -23,3 +23,10 @@ export const SproductBtn = styled(Link)`
   margin-bottom: 8px;
   text-decoration: none;
 `
+export const ScloseBtn = styled.img`
+  width: 16px;
+  height: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+`

@@ -1,15 +1,18 @@
-import { ProfileHdr } from './style'
+import { Link } from 'react-router-dom'
+import { ProfileHdr, SLink } from './style'
 import bckheader from '../../assets/bckheader.png'
 import logo from '../../assets/logo.png'
 
 const ProfileHeader = () => (
   <>
     <ProfileHdr style={{ backgroundImage: `url(${bckheader})` }}>
-      <h3 id="type">Restaurantes</h3>
+      <SLink to="/">
+        <h3 id="title">Restaurantes</h3>
+      </SLink>
       <div id="logoarea">
-        <a href="#">
+        <Link to="/">
           <img src={logo} alt="E-food" />
-        </a>
+        </Link>
       </div>
       <h3 id="type">0 produto(s) no carrinho</h3>
     </ProfileHdr>

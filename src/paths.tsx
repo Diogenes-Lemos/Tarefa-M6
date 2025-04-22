@@ -1,14 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom'
-import Home from './Home/Index'
-import Profile1 from './Profile1/Profile'
+import { Routes, Route } from 'react-router-dom'
 
-export const routes = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/profile1',
-    element: <Profile1 />
-  }
-])
+import Home from './Home/Index'
+import Profile1 from './Profile/Profile'
+
+export const Paths = () => (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/profile/:id" element={<Profile1 />} />
+  </Routes>
+)

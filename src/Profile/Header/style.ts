@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import { baseColors } from '../../mainStyles'
 
@@ -11,14 +12,8 @@ export const ProfileHdr = styled.header`
   font-size: 18px;
   font-weight: 900;
   color: ${baseColors.componentColor};
-
-  /*
-  #typearea {
-
-  }
-
-  #cart {
-
-  }
-  */
+`
+export const SLink = styled(Link)`
+  text-decoration: none;
+  color: ${baseColors.componentColor};
 `

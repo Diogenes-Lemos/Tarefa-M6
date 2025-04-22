@@ -13,6 +13,7 @@ export const RestaurantArea = styled.li`
   #productimg {
     width: 100%;
     height: 217px;
+    background-size: cover;
     #producttag {
       display: flex;
       justify-content: end;
@@ -47,6 +48,8 @@ export const RestaurantArea = styled.li`
     color: ${baseColors.componentColor};
     font-weight: 400;
     line-height: 22px;
+    max-height: 80px;
+    overflow: scroll;
   }
 
   #btnarea {

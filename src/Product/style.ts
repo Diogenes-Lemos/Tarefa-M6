@@ -12,6 +12,7 @@ export const ProductArea = styled.div`
     width: 304px;
     height: 167px;
     margin: 8px;
+    background-size: cover;
   }
 
   #title {
@@ -23,6 +24,8 @@ export const ProductArea = styled.div`
   #description {
     width: 304px;
     height: 84px;
+    max-height: 84px;
+    overflow: scroll;
     font-size: 14px;
     font-weight: 400;
     margin: 8px;

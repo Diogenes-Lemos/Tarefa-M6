@@ -2,18 +2,16 @@ import { RestaurantArea } from './style'
 import estrela from '../../assets/estrela.png'
 
 type Props = {
-  id: string
   imagePath: string
   title: string
   avaliation: number
   restaurantText: string
-  btnComponent1?: React.ReactElement
+  btnComponent1?: React.ReactElement | null
   btnComponent2?: React.ReactElement
   btnComponent3?: React.ReactElement
 }
 
 const Restaurant = ({
-  id,
   imagePath,
   title,
   avaliation,
@@ -22,7 +20,7 @@ const Restaurant = ({
   btnComponent2,
   btnComponent3
 }: Props) => (
-  <RestaurantArea id={id}>
+  <RestaurantArea>
     <div id="productimg" style={{ backgroundImage: `url(${imagePath})` }}>
       <div id="producttag">
         {btnComponent1}
