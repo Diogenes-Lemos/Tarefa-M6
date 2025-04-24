@@ -25,11 +25,13 @@ export const ProductArea = styled.div`
     width: 304px;
     height: 84px;
     max-height: 84px;
-    overflow: scroll;
     font-size: 14px;
     font-weight: 400;
     margin: 8px;
     line-height: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
   }
 
   #btnarea {

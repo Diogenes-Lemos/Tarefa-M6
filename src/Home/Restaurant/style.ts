@@ -49,7 +49,9 @@ export const RestaurantArea = styled.li`
     font-weight: 400;
     line-height: 22px;
     max-height: 80px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
   }
 
   #btnarea {
