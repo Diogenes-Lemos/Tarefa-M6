@@ -1,8 +1,8 @@
 import { Farea } from './styles'
-import Logo from '../assets/logo.png'
-import Instagram from '../assets/instagram.png'
-import Twitter from '../assets/twitter.png'
-import Facebook from '../assets/facebook.png'
+import Logo from '../../assets/logo.png'
+import Instagram from '../../assets/instagram.png'
+import Twitter from '../../assets/twitter.png'
+import Facebook from '../../assets/facebook.png'
 
 const Ftr = () => (
   <Farea>

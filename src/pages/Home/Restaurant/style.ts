@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { baseColors } from '../../mainStyles'
+import { baseColors } from '../../../mainStyles'
 
 export const RestaurantArea = styled.li`
   width: 472px;

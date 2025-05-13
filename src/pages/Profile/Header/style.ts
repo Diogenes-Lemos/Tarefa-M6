@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { baseColors } from '../../mainStyles'
+import { baseColors } from '../../../mainStyles'
 
 export const ProfileHdr = styled.header`
   width: 100%;
@@ -16,4 +16,9 @@ export const ProfileHdr = styled.header`
 export const SLink = styled(Link)`
   text-decoration: none;
   color: ${baseColors.componentColor};
+`
+export const Scart = styled.h3`
+  &:hover {
+    cursor: pointer;
+  }
 `

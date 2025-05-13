@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { MainArea } from './style'
 import Restaurant from '../Restaurant'
-import { Btn } from '../../buttons'
-import { restaurantInput } from '../../types/types'
+import { Btn } from '../../../components/buttons'
+import { restaurantInput } from '../../../types/types'
 
 export const RestaurantList = () => {
   const [restaurant, setRestaurant] = useState<restaurantInput[]>([])

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { baseColors } from '../mainStyles'
+import { baseColors } from '../../mainStyles'
 
 export const Sbtn = styled(Link)`
   font-size: 14px;

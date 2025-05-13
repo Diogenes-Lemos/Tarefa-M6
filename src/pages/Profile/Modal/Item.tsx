@@ -1,5 +1,5 @@
 import { Sitem, Sdescription } from './style'
-import { ProductBtn } from '../../buttons/index'
+import { ProductBtn } from '../../../components/buttons/index'
 import { ReactElement } from 'react'
 
 type Props = {
@@ -10,6 +10,9 @@ type Props = {
   prodsize: string | number
   valor: number
   close: ReactElement
+  close2: () => null | void
+  setCart: () => null | void
+  setOpen: () => null | void
 }
 
 const Item = ({
@@ -19,7 +22,10 @@ const Item = ({
   description,
   prodsize,
   valor,
-  close
+  close,
+  close2,
+  setCart,
+  setOpen
 }: Props) => (
   <Sitem className={acessed}>
     <Sdescription>
@@ -32,6 +38,11 @@ const Item = ({
         <p id="itemtext">{prodsize}</p>
         <br />
         <ProductBtn
+          onclick={() => {
+            setCart()
+            setOpen()
+            close2()
+          }}
           link="#"
           title={`Adicionar ao carrinho - R$ ${valor.toFixed(2)}`}
         />

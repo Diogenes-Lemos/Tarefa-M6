@@ -1,5 +1,5 @@
 import { Sbtn, SproductBtn, ScloseBtn } from './styles'
-import CloseImg from '../assets/close.png'
+import CloseImg from '../../assets/close.png'
 
 type Props = {
   title: string

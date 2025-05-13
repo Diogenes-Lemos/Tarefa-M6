@@ -1,20 +1,38 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { add, remove, open } from '../../redux/slices/cartSlice'
 
 import ProfileHeader from './Header'
-import { ProductBtn, CloseBtn } from '../buttons/index'
+import { ProductBtn, CloseBtn } from '../../components/buttons/index'
 import Hero from './Hero'
 import { ListArea } from './style'
 import Item from './Modal/Item'
-import Ftr from '../Footer'
-import Product from '../Product'
-import { restaurantInput, cardapioInput } from '../types/types'
+import Ftr from '../../components/Footer'
+import Product from '../../components/Product'
+import { restaurantInput, cardapioInput } from '../../types/types'
+import Cart from '../../components/Cart'
 
 const Profile1 = () => {
   const { id } = useParams()
   const [isopen, setisopen] = useState(false)
   const [restaurant, setRestaurant] = useState<restaurantInput | null>(null)
   const [selectedItem, setSelectedItem] = useState<cardapioInput | null>(null)
+  const dispatch = useDispatch()
+  const setCart = () => {
+    if (!selectedItem) return
+    dispatch(
+      add({
+        id: selectedItem.id,
+        imagePath: selectedItem.foto,
+        title: selectedItem.nome,
+        price: selectedItem.preco
+      })
+    )
+  }
+  const OpenCart = () => {
+    dispatch(open())
+  }
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
@@ -58,16 +76,22 @@ const Profile1 = () => {
         </div>
       </ListArea>
       {selectedItem && (
-        <Item
-          key={selectedItem.id}
-          acessed={isopen ? 'open' : 'close'}
-          imgpatch={selectedItem.foto}
-          prodtitle={selectedItem.nome}
-          description={selectedItem.descricao}
-          prodsize={selectedItem.porcao}
-          valor={selectedItem.preco}
-          close={<CloseBtn onclick={() => setisopen(false)} />}
-        />
+        <>
+          <Item
+            key={selectedItem.id}
+            acessed={isopen ? 'open' : 'close'}
+            imgpatch={selectedItem.foto}
+            prodtitle={selectedItem.nome}
+            description={selectedItem.descricao}
+            prodsize={selectedItem.porcao}
+            valor={selectedItem.preco}
+            close={<CloseBtn onclick={() => setisopen(false)} />}
+            close2={() => setisopen(false)}
+            setCart={setCart}
+            setOpen={OpenCart}
+          />
+          <Cart />
+        </>
       )}
       <Ftr />
     </body>

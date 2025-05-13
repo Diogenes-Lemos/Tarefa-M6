@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
-import { baseColors } from '../mainStyles'
+import { baseColors } from '../../../mainStyles'
 
-export const ListArea = styled.main`
+export const MainArea = styled.main`
   width: 100%;
   background-color: ${baseColors.bckColor2};
   display: flex;
   justify-content: center;
 
   #itensarea {
-    margin-top: 56px;
+    margin-top: 80px;
     margin-bottom: 120px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
 `
