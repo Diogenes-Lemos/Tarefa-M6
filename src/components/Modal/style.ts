@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { baseColors } from '../../../mainStyles'
+import { baseColors } from '../../mainStyles'
 
-export const Sitem = styled.div`
+export const Soverlay = styled.div`
   &.open {
     display: block;
   }
@@ -28,7 +28,7 @@ export const Sitem = styled.div`
 `
 export const Sdescription = styled.div`
   position: absolute;
-  width: 1024px;
+  width: 100vh;
   height: 344px;
   top: 50%;
   left: 50%;

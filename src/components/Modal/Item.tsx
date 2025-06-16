@@ -1,5 +1,5 @@
-import { Sitem, Sdescription } from './style'
-import { ProductBtn } from '../../../components/buttons/index'
+import { Soverlay, Sdescription } from './style'
+import { ProductBtn } from '../buttons/index'
 import { ReactElement } from 'react'
 
 type Props = {
@@ -27,7 +27,7 @@ const Item = ({
   setCart,
   setOpen
 }: Props) => (
-  <Sitem className={acessed}>
+  <Soverlay className={acessed}>
     <Sdescription>
       <div id="btnClose">{close}</div>
       <img src={imgpatch} alt={prodtitle} id="imgarea" />
@@ -48,7 +48,7 @@ const Item = ({
         />
       </div>
     </Sdescription>
-  </Sitem>
+  </Soverlay>
 )
 
 export default Item

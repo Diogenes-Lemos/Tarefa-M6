@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 import { baseColors } from '../../mainStyles'
-import { ProductBtn } from '../buttons'
 
-export const Scartarea = styled.section`
-  &.open {
+export const Scartarea = styled.div`
+  &.openCart {
     display: block;
   }
-  &.closed {
+  &.closedCart {
     display: none;
   }
   position: fixed;
@@ -55,6 +54,16 @@ export const Scart = styled.aside`
       border: none;
       background-color: ${baseColors.bckColor1};
       color: ${baseColors.componentColor};
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
+  #noitem {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: ${baseColors.bckColor1};
   }
 `

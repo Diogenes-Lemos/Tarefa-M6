@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { baseColors } from '../../mainStyles'
+import { SproductBtnProps } from '../../types/types'
 
 export const Sbtn = styled(Link)`
   font-size: 14px;
@@ -10,9 +11,9 @@ export const Sbtn = styled(Link)`
   background-color: ${baseColors.componentColor};
   text-decoration: none;
 `
-export const SproductBtn = styled(Link)`
+export const SproductBtn = styled(Link)<SproductBtnProps>`
   display: flex;
-  width: 304px;
+  width: ${({ swidth }) => swidth || '304px'};
   height: 24px;
   background-color: ${baseColors.bckColor1};
   color: ${baseColors.componentColor};

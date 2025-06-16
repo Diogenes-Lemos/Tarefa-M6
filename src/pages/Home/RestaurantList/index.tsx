@@ -1,21 +1,24 @@
-import { useEffect, useState } from 'react'
 import { MainArea } from './style'
-import Restaurant from '../Restaurant'
+import Restaurant from '../../../components/Restaurant'
 import { Btn } from '../../../components/buttons'
-import { restaurantInput } from '../../../types/types'
+import { useGetRestaurantsQuery } from '../../../services/api'
+import { Loading, Error } from '../../../components/Loads/Loads'
 
 export const RestaurantList = () => {
-  const [restaurant, setRestaurant] = useState<restaurantInput[]>([])
+  const { data: restaurants, isLoading, error } = useGetRestaurantsQuery()
 
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setRestaurant(res))
-  }, [])
+  if (isLoading) {
+    return <Loading />
+  }
+
+  if (error || !restaurants) {
+    return <Error />
+  }
+
   return (
     <MainArea>
       <ul id="itensarea">
-        {restaurant.map((rest) => (
+        {restaurants.map((rest) => (
           <Restaurant
             key={rest.id}
             imagePath={rest.capa}

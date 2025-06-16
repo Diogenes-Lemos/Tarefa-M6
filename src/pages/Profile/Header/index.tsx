@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../redux/store'
 import { open } from '../../../redux/slices/cartSlice'
 import { Link } from 'react-router-dom'
-import { ProfileHdr, SLink, Scart } from './style'
+import { ProfileHdr, SLink, ScartCounter } from './style'
 import bckheader from '../../../assets/bckheader.png'
 import logo from '../../../assets/logo.png'
 
@@ -23,9 +23,9 @@ const ProfileHeader = () => {
             <img src={logo} alt="E-food" />
           </Link>
         </div>
-        <Scart id="cart" onClick={Clicked}>
+        <ScartCounter id="cart" onClick={Clicked}>
           {itemCount} produto(s) no carrinho
-        </Scart>
+        </ScartCounter>
       </ProfileHdr>
     </>
   )

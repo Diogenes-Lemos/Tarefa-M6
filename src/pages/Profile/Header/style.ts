@@ -17,7 +17,7 @@ export const SLink = styled(Link)`
   text-decoration: none;
   color: ${baseColors.componentColor};
 `
-export const Scart = styled.h3`
+export const ScartCounter = styled.h3`
   &:hover {
     cursor: pointer;
   }

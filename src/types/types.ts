@@ -17,3 +17,7 @@ export type restaurantInput = {
   capa: string
   cardapio: cardapioInput[]
 }
+
+export interface SproductBtnProps {
+  swidth?: string
+}

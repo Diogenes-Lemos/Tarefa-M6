@@ -1,10 +1,12 @@
 import { Sbtn, SproductBtn, ScloseBtn } from './styles'
 import CloseImg from '../../assets/close.png'
+import { SproductBtnProps } from '../../types/types'
 
 type Props = {
   title: string
   link: string
   onclick?: () => void
+  swidth?: string
 }
 
 type PropClose = {
@@ -13,8 +15,8 @@ type PropClose = {
 
 export const Btn = ({ title, link }: Props) => <Sbtn to={link}>{title}</Sbtn>
 
-export const ProductBtn = ({ title, link, onclick }: Props) => (
-  <SproductBtn to={link} onClick={onclick}>
+export const ProductBtn = ({ title, link, onclick, swidth }: Props) => (
+  <SproductBtn to={link} onClick={onclick} swidth={swidth}>
     {title}
   </SproductBtn>
 )

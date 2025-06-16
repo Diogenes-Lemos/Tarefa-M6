@@ -1,5 +1,5 @@
 import { RestaurantArea } from './style'
-import estrela from '../../../assets/estrela.png'
+import estrela from '../../assets/estrela.png'
 
 type Props = {
   imagePath: string
