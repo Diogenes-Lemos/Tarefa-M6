@@ -66,6 +66,12 @@ export const HalfForm = styled.div`
     font-size: 14px;
     color: #4b4b4b;
   }
+  #cardNumber {
+    width: 228px;
+  }
+  #cvv {
+    width: 87px;
+  }
 `
 export const BtnArea = styled.div`
   width: 344px;

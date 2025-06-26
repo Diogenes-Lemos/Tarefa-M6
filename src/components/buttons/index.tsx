@@ -1,6 +1,5 @@
-import { Sbtn, SproductBtn, ScloseBtn } from './styles'
+import { Sbtn, SproductBtn, ScloseBtn, SformBtn } from './styles'
 import CloseImg from '../../assets/close.png'
-import { SproductBtnProps } from '../../types/types'
 
 type Props = {
   title: string
@@ -13,6 +12,13 @@ type PropClose = {
   onclick?: () => void
 }
 
+type TitleFormButton = {
+  formLevel: string
+  type?: "button" | "submit" | "reset"
+  onClick?: () => void
+  disabled?: boolean
+}
+
 export const Btn = ({ title, link }: Props) => <Sbtn to={link}>{title}</Sbtn>
 
 export const ProductBtn = ({ title, link, onclick, swidth }: Props) => (
@@ -23,4 +29,10 @@ export const ProductBtn = ({ title, link, onclick, swidth }: Props) => (
 
 export const CloseBtn = ({ onclick }: PropClose) => (
   <ScloseBtn src={CloseImg} onClick={onclick} />
+)
+
+export const FormBtn = ({ formLevel, type = 'button', onClick }: TitleFormButton) => (
+  <SformBtn type={type} onClick={onClick}>
+    {formLevel}
+  </SformBtn>
 )

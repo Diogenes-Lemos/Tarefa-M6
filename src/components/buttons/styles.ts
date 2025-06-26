@@ -31,3 +31,21 @@ export const ScloseBtn = styled.img`
     cursor: pointer;
   }
 `
+
+export const SformBtn = styled.button`
+  display: flex;
+  width: 336px;
+  height: 24px;
+  background-color: ${baseColors.bckColor1};
+  color: ${baseColors.componentColor};
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  text-decoration: none;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+`

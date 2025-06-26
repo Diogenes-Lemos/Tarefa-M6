@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 type ClientData = {
   sucess: boolean
@@ -57,10 +57,18 @@ const checkoutSlice = createSlice({
     orderAccepted: (state) => {
       state.order.sucess = true
       state.order.empty = false
+    },
+    orderReset: (state) => {
+      state.client.sucess = false
+      state.client.empty = true
+      state.payment.sucess = false
+      state.payment.empty = true
+      state.order.sucess = false
+      state.order.empty = true
     }
   }
 })
 
-export const { clientAccepted, paymentAccepted, orderAccepted } =
+export const { clientAccepted, paymentAccepted, orderAccepted, orderReset } =
   checkoutSlice.actions
 export default checkoutSlice.reducer

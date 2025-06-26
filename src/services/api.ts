@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { restaurantInput } from '../types/types'
+import type { OrderInfo } from '../redux/slices/orderSlice'
 
 const api = createApi({
   reducerPath: 'api',
@@ -12,9 +13,16 @@ const api = createApi({
     }),
     getRestaurantById: builder.query<restaurantInput, string>({
       query: (id) => `restaurantes/${id}`
-    })
+    }),
+    checkoutOrder: builder.mutation<{ orderId: string }, OrderInfo>({
+      query: (body) => ({
+        url: 'checkout',
+        method: 'POST',
+        body
+      })
+    }),
   })
 })
 
-export const { useGetRestaurantsQuery, useGetRestaurantByIdQuery } = api
+export const { useGetRestaurantsQuery, useGetRestaurantByIdQuery, useCheckoutOrderMutation } = api
 export default api
