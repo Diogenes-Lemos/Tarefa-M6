@@ -1,21 +1,22 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-//Abaixo o tipo que organiza os dados que estou mandando para API, o que fiz de errado aqui?! 
+type Product = {
+    id: number
+    price: number
+}
+
 export type OrderInfo = {
-    products: {
-        id: number
-        price: number
-    }[],
+    products: Product[],
     delivery: {
         receiver: string
-    address: {
-        description: string
-        city: string
-        zipCode: string
-        number: number
-        complement: string
+        address: {
+            description: string
+            city: string
+            zipCode: string
+            number: number
+            complement: string
+        }
     }
-}
     payment: {
         card: {
             name: string
@@ -66,7 +67,7 @@ const OrderSlice = createSlice({
     name: 'orderInformations',
     initialState,
     reducers: {
-        setProducts: (state, action: PayloadAction<{ id: number; price: number }[]>) => {
+        setProducts: (state, action: PayloadAction<Product[]>) => {
             state.information.products = action.payload
         },
         setRecipientData: (state, action: PayloadAction<{
@@ -78,7 +79,7 @@ const OrderSlice = createSlice({
             complement: string
         }>) => {
             state.information.delivery = {
-            receiver: action.payload.receiver,
+                receiver: action.payload.receiver,
                 address: {
                     description: action.payload.description,
                     city: action.payload.city,
@@ -123,5 +124,3 @@ export const {
 } = OrderSlice.actions
 
 export default OrderSlice.reducer
-
-

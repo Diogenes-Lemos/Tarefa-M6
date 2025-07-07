@@ -20,7 +20,7 @@ const CheckData = () => {
   const clientForm = useFormik({
     initialValues: {
       Recipient: '',
-      Adress: '',
+      Address: '',
       City: '',
       PostalCode: '',
       Number: '',
@@ -28,7 +28,7 @@ const CheckData = () => {
     },
     validationSchema: Yup.object({
       Recipient: Yup.string().min(5, 'Campo inválido').required('Campo Obrigatório'),
-      Adress: Yup.string().min(5, 'Campo inválido').required('Campo Obrigatório'),
+      Address: Yup.string().min(5, 'Campo inválido').required('Campo Obrigatório'),
       City: Yup.string().min(2, 'Campo inválido').required('Campo Obrigatório'),
       PostalCode: Yup.string().length(9, 'Campo inválido').required('Campo Obrigatório'),
       Number: Yup.string().required('Campo Obrigatório'),
@@ -57,7 +57,7 @@ const CheckData = () => {
     if (isValid) {
       dispatch(setRecipientData({
         receiver: clientForm.values.Recipient,
-        description: clientForm.values.Adress,
+        description: clientForm.values.Address,
         city: clientForm.values.City,
         zipCode: clientForm.values.PostalCode,
         number: Number(clientForm.values.Number),
@@ -86,9 +86,9 @@ const CheckData = () => {
           <small>{getErrorMessage('Recipient', clientForm.errors.Recipient)}</small>
         </InputArea>
         <InputArea>
-          <label htmlFor="Adress">Endereço</label>
-          <input type="text" id="Adress" name="Adress" value={clientForm.values.Adress} onChange={clientForm.handleChange} onBlur={clientForm.handleBlur}/>
-          <small>{getErrorMessage('Adress', clientForm.errors.Adress)}</small>
+          <label htmlFor="Address">Endereço</label>
+          <input type="text" id="Address" name="Address" value={clientForm.values.Address} onChange={clientForm.handleChange} onBlur={clientForm.handleBlur}/>
+          <small>{getErrorMessage('Address', clientForm.errors.Address)}</small>
         </InputArea>
         <InputArea>
           <label htmlFor="City">Cidade</label>

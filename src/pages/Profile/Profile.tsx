@@ -47,7 +47,7 @@ const Profile1 = () => {
   }
 
   return (
-    <body id={id}>
+    <div id={id}>
       <ProfileHeader />
       <Hero
         background={restaurant.capa}
@@ -96,7 +96,7 @@ const Profile1 = () => {
       )}
       <Cart />
       <Ftr />
-    </body>
+    </div>
   )
 }
 
