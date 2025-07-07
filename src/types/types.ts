@@ -1,10 +1,10 @@
 export type cardapioInput = {
-    id: number
-    foto: string
-    preco: number
-    nome: string
-    descricao: string
-    porcao: string
+  id: number
+  foto: string
+  preco: number
+  nome: string
+  descricao: string
+  porcao: string
 }
 
 export type restaurantInput = {

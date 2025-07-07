@@ -14,7 +14,7 @@ type PropClose = {
 
 type TitleFormButton = {
   formLevel: string
-  type?: "button" | "submit" | "reset"
+  type?: 'button' | 'submit' | 'reset'
   onClick?: () => void
   disabled?: boolean
 }
@@ -31,7 +31,11 @@ export const CloseBtn = ({ onclick }: PropClose) => (
   <ScloseBtn src={CloseImg} onClick={onclick} />
 )
 
-export const FormBtn = ({ formLevel, type = 'button', onClick }: TitleFormButton) => (
+export const FormBtn = ({
+  formLevel,
+  type = 'button',
+  onClick
+}: TitleFormButton) => (
   <SformBtn type={type} onClick={onClick}>
     {formLevel}
   </SformBtn>

@@ -20,9 +20,13 @@ const api = createApi({
         method: 'POST',
         body
       })
-    }),
+    })
   })
 })
 
-export const { useGetRestaurantsQuery, useGetRestaurantByIdQuery, useCheckoutOrderMutation } = api
+export const {
+  useGetRestaurantsQuery,
+  useGetRestaurantByIdQuery,
+  useCheckoutOrderMutation
+} = api
 export default api
